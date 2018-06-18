@@ -14,14 +14,16 @@ Summary: Cubic Spline Approximation.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/csa-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/csa-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/csa-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/csa-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/csa-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/csa-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/csa-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/csa-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/csa/badges/version.svg)](https://anaconda.org/conda-forge/csa)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/csa/badges/downloads.svg)](https://anaconda.org/conda-forge/csa)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-csa-green.svg)](https://anaconda.org/conda-forge/csa) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/csa.svg)](https://anaconda.org/conda-forge/csa) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/csa.svg)](https://anaconda.org/conda-forge/csa) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/csa.svg)](https://anaconda.org/conda-forge/csa) |
 
 Installing csa
 ==============
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
