@@ -1,0 +1,20 @@
+LIBRARY csa
+EXPORTS
+    csa_verbose DATA
+    csa_version DATA
+    csa_create
+    csa_destroy
+    csa_addpoints
+    csa_addstd
+    csa_calculatespline
+    csa_approximatepoint
+    csa_approximatepoints
+    csa_setnpmin
+    csa_setnpmax
+    csa_setk
+    csa_setnppc
+    csa_approximatepoints2
+    svd_verbose DATA
+    svd
+    svd_sort
+    svd_lsq

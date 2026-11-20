@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  version: "1.22.0"
+
+package:
+  name: csa
+  version: ${{ version }}
+
+source:
+  url: https://github.com/sakov/csa-c/archive/v${{ version }}.tar.gz
+  sha256: b6d6ebeea146e09fc7aef827a3a3b22b7af674c2f0c67169c2275237e54c0c02
+  patches:
+    # The upstream Windows rint macro truncates instead of rounding.
+    - windows-rint.patch
+
+build:
+  number: 2004
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - if: unix
+      then: make
+
+tests:
+  - script:
+      - csabathy -V
+  - script: test_csa.py
+    requirements:
+      run:
+        - python
+  - package_contents:
+      bin:
+        - csabathy
+      include:
+        - csa.h
+      files:
+        - if: unix
+          then: lib/libcsa.a
+          else: Library/lib/csa.lib
+        - if: unix
+          then: lib/libcsa.so
+          else: Library/lib/csa_static.lib
+        - if: win
+          then: Library/bin/csa.dll
+
+about:
+  homepage: https://github.com/sakov/csa-c
+  license: LicenseRef-Sakov
+  license_file: csa/LICENSE
+  summary: Cubic Spline Approximation
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
